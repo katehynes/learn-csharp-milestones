@@ -48,9 +48,9 @@ Below is a list of tasks that correspond roughly to the "Take Action" sections o
 ## Chapter 1
 Getting to Know Your Environment (9–21)
 
-- [ ] ✏️ Open the reference manual for any component from inside Unity. Paste the link: **??**
-- [ ] ✏️ Find the button to jump to the scripting reference the any reference manual page. Paste the link: **??**
-- [ ] ✏️ Search for the `Strings` class in [Microsoft's C# documents](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). Paste the link: **??**
+- [ ] ✏️ Open the reference manual for any component from inside Unity. Paste the link: [file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/Manual/class-Transform.html](file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/Manual/class-Transform.html).
+- [ ] ✏️ Find the button to jump to the scripting reference the any reference manual page. Paste the link: [file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/ScriptReference/index.html](file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/ScriptReference/index.html).
+- [ ] ✏️ Search for the `Strings` class in [Microsoft's C# documents](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). Paste the link: [https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-7.0](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-7.0).
 
 
 ## Chapter 2
