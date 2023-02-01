@@ -75,7 +75,7 @@ Diving into Variables, Types, and Methods (38–64)
 		- [ ] Define a simple method with parameters
 		- [ ] Add a return type and return some data from a method
 		- [ ] Use data returned from a method
-- [ ] ✏️ Explain some differences between public and private variables: **??**
+- [ ] ✏️ Explain some differences between public and private variables: Private variables cannot be accessed or modified within the Inspector window, whereas public variables can be. Public and private variables can be modified and accessed in the class that they are created/contained in, but public variables can also be accessed and modified in any other script. By default, variables are set to private unless they are marked public, which can be done by adding the keyword "public" to their declaration. 
 
 
 ## Chapter 4
