@@ -60,6 +60,18 @@ public class LearningCurve : MonoBehaviour
         foreach(KeyValuePair<string, int> kvp in points) {
             Debug.LogFormat("points: {0} - {1}", kvp.Key, kvp.Value);
         }
+
+        // ch 5
+        Character hero = new Character("Jim", 0);
+        Character heroine = new Character("Agatha", 10);
+        Debug.LogFormat("Hero: {0} - {1} EXP", hero.name, hero.exp);
+        Debug.LogFormat("Heroine: {0} - {1} EXP", heroine.name, heroine.exp);
+        Weapon huntingBow = new Weapon("Hunting Bow", 100);
+        Weapon warBow = new Weapon("War Bow", 60);
+        Debug.LogFormat("Weapon: {0} - {1} damage", huntingBow.name, huntingBow.damage);
+        Debug.LogFormat("Weapon: {0} - {1} damage", warBow.name, warBow.damage);
+
+    
     }
 
     // Update is called once per frame
