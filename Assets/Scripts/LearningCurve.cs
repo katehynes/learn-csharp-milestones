@@ -7,7 +7,7 @@ public class LearningCurve : MonoBehaviour
     public int myInt = 0;
     public float myFloat = 3.0f;
     public string myString = "Hello";
-    public bool myBool = true;
+    private bool myBool = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +17,15 @@ public class LearningCurve : MonoBehaviour
         a multi line comment*/
         Debug.Log(myInt);
         Debug.LogFormat("This is myInt doubled: {0}", doubled);
+        Debug.Log($"{myString} world!");
+        string concatString = "Hello" + " world.";
+        Debug.Log(concatString);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
 
     }
     /// <summary>
