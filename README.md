@@ -48,9 +48,9 @@ Below is a list of tasks that correspond roughly to the "Take Action" sections o
 ## Chapter 1
 Getting to Know Your Environment (9–21)
 
-- [ ] ✏️ Open the reference manual for any component from inside Unity. Paste the link: **??**
-- [ ] ✏️ Find the button to jump to the scripting reference the any reference manual page. Paste the link: **??**
-- [ ] ✏️ Search for the `Strings` class in [Microsoft's C# documents](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). Paste the link: **??**
+- [ ] ✏️ Open the reference manual for any component from inside Unity. Paste the link: [file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/Manual/class-Transform.html](file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/Manual/class-Transform.html).
+- [ ] ✏️ Find the button to jump to the scripting reference the any reference manual page. Paste the link: [file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/ScriptReference/index.html](file:///Applications/Unity/Hub/Editor/2021.3.16f1/Documentation/en/ScriptReference/index.html).
+- [ ] ✏️ Search for the `Strings` class in [Microsoft's C# documents](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). Paste the link: [https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-7.0](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-7.0).
 
 
 ## Chapter 2
@@ -75,7 +75,7 @@ Diving into Variables, Types, and Methods (38–64)
 		- [ ] Define a simple method with parameters
 		- [ ] Add a return type and return some data from a method
 		- [ ] Use data returned from a method
-- [ ] ✏️ Explain some differences between public and private variables: **??**
+- [ ] ✏️ Explain some differences between public and private variables: Private variables cannot be accessed or modified within the Inspector window, whereas public variables can be. Public and private variables can be modified and accessed in the class that they are created/contained in, but public variables can also be accessed and modified in any other script. By default, variables are set to private unless they are marked public, which can be done by adding the keyword "public" to their declaration. 
 
 
 ## Chapter 4
@@ -88,7 +88,7 @@ Control Flow and Collection Types (65–93)
 		- [ ] Write a nested `if` statement
 		- [ ] Write a `switch` statement
 	- [ ] Collections
-		- [ ] ✏️ What will `arr[1]` return from this array `int[] arr = {'red','green','blue'};` ? : **??**
+		- [ ] ✏️ What will `arr[1]` return from this array `int[] arr = {'red','green','blue'};` ? : 'green'
 		- [ ] Write an Array of the type `int[]`
 		- [ ] Write a List of the type `List<string>`
 		- [ ] Write a Dictionary of the type `Dictionary<string, int>`
@@ -103,7 +103,7 @@ Control Flow and Collection Types (65–93)
 Working with Classes, Structs, and OOP (94–119)
 
 - Classes
-	- [ ] ✏️ Explain the difference between reference and value type variables: **??**
+	- [ ] ✏️ Explain the difference between reference and value type variables: Reference type variables, such as classes, store a reference to where the object is located in the program's memory. When value types such as structs are initialized, on the other hand, all of their is data stored in the corresponding variable. This means that each value type variable has a seperate identity, whereas with reference types, a change to one variable will affect all variables that storing the same memory reference. 
 	- [ ] Create Assets/Scripts/Character.cs
 		- [ ] Create a `Character` class
 		- [ ] Create `string` and `int` fields inside the Character class
