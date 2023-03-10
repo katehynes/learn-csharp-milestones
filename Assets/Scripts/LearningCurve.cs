@@ -8,6 +8,9 @@ public class LearningCurve : MonoBehaviour
     public float myFloat = 3.0f;
     public string myString = "Hello";
     private bool myBool = true;
+    private Transform camTransform;
+    public GameObject directionLight;
+    private Transform lightTransform;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,15 +65,21 @@ public class LearningCurve : MonoBehaviour
         }
 
         // ch 5
-        Character hero = new Character("Jim", 0);
-        Character heroine = new Character("Agatha", 10);
-        Debug.LogFormat("Hero: {0} - {1} EXP", hero.name, hero.exp);
-        Debug.LogFormat("Heroine: {0} - {1} EXP", heroine.name, heroine.exp);
+        Character hero = new Character();
+        Character heroine = new Character("Agatha");
+        hero.PrintStatsInfo();
+        heroine.PrintStatsInfo();
         Weapon huntingBow = new Weapon("Hunting Bow", 100);
         Weapon warBow = new Weapon("War Bow", 60);
-        Debug.LogFormat("Weapon: {0} - {1} damage", huntingBow.name, huntingBow.damage);
-        Debug.LogFormat("Weapon: {0} - {1} damage", warBow.name, warBow.damage);
-
+        huntingBow.PrintWeaponStats();
+        warBow.PrintWeaponStats();
+        Paladin knight = new Paladin("Sir Arthur", huntingBow);
+        knight.PrintStatsInfo();
+        camTransform = this.GetComponent<Transform>();
+        Debug.Log(camTransform.localPosition);
+        directionLight = GameObject.Find("Directional Light");
+        lightTransform = directionLight.GetComponent<Transform>();
+        Debug.Log(lightTransform.localPosition);
     
     }
 
