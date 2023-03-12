@@ -8,6 +8,14 @@ public class PlayerBehavior : MonoBehaviour {
     public float moveSpeed = 10f;
     public float rotateSpeed = 75f;
 
+    public float jumpVelocity = 5f;
+
+    public float distanceToGround = 0.1f;
+    public LayerMask groundLayer;
+
+    public GameObject bullet;
+    public float bulletSpeed = 100f;
+
     // vInput = vertical axis input
     // hInput = horizontal axis input
     private float vInput;
@@ -15,9 +23,13 @@ public class PlayerBehavior : MonoBehaviour {
 
     private Rigidbody _rb;
 
+    private CapsuleCollider _col;
+
     void Start() {
         // checks if the game object has a Rigidbody component & returns it
         _rb = GetComponent<Rigidbody>();
+
+        _col = GetComponent<CapsuleCollider>();
     }
 
     void Update() {
@@ -38,6 +50,10 @@ public class PlayerBehavior : MonoBehaviour {
     }
     // rigidbody/physics related code goes inside FixedUpdate b/c it's frame rate independent
     void FixedUpdate(){
+        if(IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
+            _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
+        }
+
         // store left & right rotation as a vector
         Vector3 rotation = Vector3.up * hInput;
 
@@ -50,5 +66,16 @@ public class PlayerBehavior : MonoBehaviour {
 
         // multiply the current rotation by the angle rotation from keyboard
         _rb.MoveRotation(_rb.rotation * angleRot);
+
+        if(Input.GetMouseButtonDown(0)) {
+            GameObject newBullet = Instantiate(bullet, this.transform.position + new Vector3(1, 0, 0), this.transform.rotation) as GameObject;
+            Rigidbody bulletRB = newBullet.GetComponent<Rigidbody>();
+            bulletRB.velocity = this.transform.forward * bulletSpeed;
+        }
+    }
+    private bool IsGrounded() {
+        Vector3 capsuleBottom = new Vector3(_col.bounds.center.x, _col.bounds.min.y, _col.bounds.center.z);
+        bool grounded = Physics.CheckCapsule(_col.bounds.center, capsuleBottom, distanceToGround, groundLayer, QueryTriggerInteraction.Ignore);
+        return grounded;
     }
 } 
